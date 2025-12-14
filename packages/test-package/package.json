@@ -1,0 +1,56 @@
+{
+	"name": "@packages/test-package-1",
+	"version": "0.1.0",
+	"private": true,
+	"type": "module",
+	"bin": {
+		"test-package-1-dev": "./lib/bin/app.cjs",
+		"test-package-1-prod": "./dist/bin/app.cjs"
+	},
+	"scripts": {
+		"------------------------INSTALLATION-------------------": "",
+		"prepare": "",
+		"pre": "git add . && npx lint-staged",
+		"link-cli": "pnpm link --global",
+		"------------------------UTILS--------------------------": "",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix",
+		"format": "pnpm prettier . --write && pnpm prettier . --check",
+		"------------------------BUILDS-------------------------": "",
+		"build:dev": "pnpm tsdown --config ./config/tsdownrc/tsdown.dev.ts",
+		"build:prod": "pnpm tsdown --config ./config/tsdownrc/tsdown.prod.ts",
+		"build:npm": "pnpm npm:prepack && pnpm tsdown --config ./config/tsdownrc/tsdown.prod.ts && pnpm npm:postpack",
+		"------------------------DEPLOYS------------------------": "",
+		"npm:prepack": "clean-package",
+		"npm:postpack": "clean-package restore",
+		"------------------------TESTS--------------------------": "",
+		"test": "vitest",
+		"test:coverage": "vitest --coverage",
+		"------------------------NPM--------------------------": "",
+		"prepublishOnly": "pnpm build:npm"
+	},
+	"devDependencies": {
+		"@ineedj/eslintrc": "1.2.3",
+		"@ineedj/prettierrc": "3.0.0",
+		"@ineedj/tsconfig": "^1.0.0",
+		"@types/node": "^24.7.2",
+		"clean-package": "^2.2.0",
+		"eslint": "^8.57.1",
+		"prettier": "^3.4.2",
+		"typescript": "^5.9.3",
+		"vitest": "^3.2.4",
+		"rollup-plugin-copy": "^3.5.0",
+		"tsdown": "^0.15.6",
+		"@vitest/coverage-v8": "^3.2.4",
+		"@configs/vitest": "workspace:*"
+	},
+	"publishConfig": {
+		"access": "public",
+		"directory": "dist",
+		"provenance": true,
+		"tag": "latest"
+	},
+	"dependencies": {
+		"commander": "^14.0.1"
+	}
+}
