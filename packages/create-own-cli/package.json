@@ -1,5 +1,5 @@
 {
-	"name": "@packages/test-package-1",
+	"name": "@packages/create-own-cli",
 	"version": "0.1.0",
 	"private": true,
 	"type": "module",
@@ -29,28 +29,38 @@
 		"------------------------NPM--------------------------": "",
 		"prepublishOnly": "pnpm build:npm"
 	},
+	"dependencies": {
+		"@clack/prompts": "^0.11.0",
+		"@myutilia/env": "^0.1.2",
+		"c12": "^3.3.2",
+		"commander": "^14.0.1",
+		"magic-regexp": "^0.10.0",
+		"oh-my-error": "^2.0.2",
+		"typia": "^10.1.0"
+	},
 	"devDependencies": {
+		"@configs/vitest": "workspace:*",
 		"@ineedj/eslintrc": "1.2.3",
 		"@ineedj/prettierrc": "3.0.0",
 		"@ineedj/tsconfig": "^1.0.0",
+		"@ryoppippi/unplugin-typia": "^2.6.5",
+		"@types/mock-fs": "^4.13.4",
 		"@types/node": "^24.7.2",
+		"@vitest/coverage-v8": "^3.2.4",
 		"clean-package": "^2.2.0",
 		"eslint": "^8.57.1",
+		"mock-fs": "^5.5.0",
 		"prettier": "^3.4.2",
-		"typescript": "^5.9.3",
-		"vitest": "^3.2.4",
 		"rollup-plugin-copy": "^3.5.0",
+		"ts-patch": "^3.3.0",
 		"tsdown": "^0.15.6",
-		"@vitest/coverage-v8": "^3.2.4",
-		"@configs/vitest": "workspace:*"
+		"typescript": "^5.9.3",
+		"vitest": "^3.2.4"
 	},
 	"publishConfig": {
 		"access": "public",
 		"directory": "dist",
 		"provenance": true,
 		"tag": "latest"
-	},
-	"dependencies": {
-		"commander": "^14.0.1"
 	}
 }
