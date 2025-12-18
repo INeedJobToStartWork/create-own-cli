@@ -5,10 +5,10 @@
 import { program } from "commander";
 
 type TCreateTemplateSettings = {
-	/** Application name */
-	name: string;
-	/** Application version */
-	version: string;
+	// /** Application name */
+	// name: string;
+	// /** Application version */
+	// version: string;
 };
 
 //----------------------
