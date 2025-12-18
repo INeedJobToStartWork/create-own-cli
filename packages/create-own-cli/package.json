@@ -53,7 +53,7 @@
 		"prettier": "^3.4.2",
 		"rollup-plugin-copy": "^3.5.0",
 		"ts-patch": "^3.3.0",
-		"tsdown": "^0.15.6",
+		"tsdown": "^0.15.12",
 		"typescript": "^5.9.3",
 		"vitest": "^3.2.4"
 	},

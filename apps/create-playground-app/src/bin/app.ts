@@ -1,5 +1,8 @@
-// eslint-disable-next-line @EslintImports/no-unassigned-import
-import "@/cli";
-import { program } from "commander";
+// // eslint-disable-next-line @EslintImports/no-unassigned-import
+// import "@/cli";
 
-program.parse(process.argv);
+// import { program } from "commander";
+
+// program.parse(process.argv);
+
+console.log("");

@@ -9,18 +9,15 @@ import { defineConfig } from "tsdown";
  * @internal
  */
 export const PROD_OPTIMIZE = {
-	splitting: false,
-	minify: true,
-	shims: true,
-
-	bundle: true,
-
-	minifyIdentifiers: true,
-	minifySyntax: true,
-	minifyWhitespace: true,
-
-	metafile: false,
-	treeshake: true
+	// splitting: false,
+	// minify: true,
+	// shims: true,
+	// bundle: true,
+	// minifyIdentifiers: true,
+	// minifySyntax: true,
+	// minifyWhitespace: true,
+	// metafile: false,
+	// treeshake: true
 	// } as const satisfies Parameters<typeof defineConfig>[number];
 };
 

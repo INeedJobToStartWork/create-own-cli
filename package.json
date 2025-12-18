@@ -23,7 +23,7 @@
     "------------------------BUILDS-------------------------": "",
     "dev": "turbo dev",
     "build": "turbo build",
-    "build:dev": "turbo build:dev",
+    "build:dev": "turbo watch build:dev",
     "build:prod": "turbo build:prod",
     "build:npm": "turbo build:npm",
     "------------------------DEPLOYS------------------------": "",

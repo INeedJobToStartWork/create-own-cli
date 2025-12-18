@@ -1,1 +1,2 @@
-export * from "./myFunction";
+export * from "./dirPathsToDepth";
+export * from "./findPathToConfig";
