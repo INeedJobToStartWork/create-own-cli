@@ -4,7 +4,7 @@
 	"private": true,
 	"type": "module",
 	"bin": {
-		"test-create-playground-app": "./dist/bin/app.cjs"
+		"test-create-playground-app": "./dist/bin/app.js"
 	},
 	"scripts": {
 		"------------------------INSTALLATION-------------------": "",

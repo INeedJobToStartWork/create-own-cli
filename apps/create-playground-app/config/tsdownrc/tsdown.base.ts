@@ -30,6 +30,13 @@ export const BasicConfig = (isDev: boolean) =>
 			banner: addNodeRequireShim,
 			dts: true,
 			format: ["esm", "cjs"]
+		},
+		CLI: {
+			entry: "src/bin/app.ts",
+			clean: false,
+			outDir: "dist/bin",
+			noExternal: ["@packages/create-own-cli", "@packages/create-own-app", "oh-my-error"],
+			dts: false
 		}
 	}) as const satisfies Record<string, UserConfig>;
 

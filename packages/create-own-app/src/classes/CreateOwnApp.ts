@@ -3,6 +3,7 @@
 //----------------------
 
 import { program } from "commander";
+import CreateTemplate from "./CreateTemplate";
 
 type TCreateOwnAppSettings = {
 	/** Application name */
@@ -19,11 +20,13 @@ export class CreateOwnApp {
 	//----
 	// Variables
 	//----
+	private settings: TCreateOwnAppSettings;
 	//----
 	// Constructor
 	//----
 
 	constructor(props: TCreateOwnAppSettings) {
+		this.settings = props;
 		program.version(props.version);
 	}
 
@@ -31,6 +34,19 @@ export class CreateOwnApp {
 	// Methods
 	//----
 
-	public init();
+	public init(): this {
+		const test = program
+			.description("Create a new application")
+			.option("-n, --name <VALUE>", "Application name")
+			.action(name => {
+				console.log(name);
+			});
+		const template = new CreateTemplate({}).addPackageManagers(["npm", "yarn", "pnpm", "dwa"]);
+		return this;
+	}
+	/** Start the application */
+	public start() {
+		program.parse(process.argv);
+	}
 }
 export default CreateOwnApp;

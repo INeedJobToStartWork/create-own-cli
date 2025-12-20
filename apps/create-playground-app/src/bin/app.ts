@@ -5,4 +5,11 @@
 
 // program.parse(process.argv);
 
-console.log("");
+import { CreateOwnApp } from "@packages/create-own-app";
+
+const app = new CreateOwnApp({
+	name: "create-playground-app",
+	version: "1.0.0"
+})
+	.init()
+	.start();
